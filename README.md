@@ -1,4 +1,6 @@
-# ☀️ sunCleaner
+<h1 align="center">
+☀️ sunCleaner
+</h1>
 
 <p align="center">
   <b>lordofsunshine/sunCleaner</b> — solar care for Windows
@@ -15,22 +17,12 @@
   <a href="#-english">🇬🇧 English</a> &nbsp;·&nbsp; <a href="#-русский">🇷🇺 Русский</a>
 </p>
 
-```
-     \  |  /
-      .---.
-  -- (     ) --
-      '---'
-     /  |  \
-  sunCleaner v1.0.0
-  lordofsunshine/sunCleaner
-```
-
 ---
 
 <a id="-english"></a>
 ## 🇬🇧 English
 
-> Disk cleanup, optimization, diagnostics and scheduler — declarative registries, honest `WhatIf`, 3-color sun palette. Made to drop your jaw!
+> Disk cleanup, optimization, diagnostics and scheduler - declarative registries, honest `WhatIf`, 3-color sun palette. Made to drop your jaw!
 
 **Palette:** `Amber #FFB627` · `White #FFF4E6` · `Coral #FF6B35` on dark background.
 
@@ -169,7 +161,7 @@ src/
 <a id="-русский"></a>
 ## 🇷🇺 Русский
 
-> Чистка диска, оптимизация, диагностика и планировщик — реестры, честный `WhatIf`, 3-цветная палитра солнца. Всё сделано для того, чтобы челюсть у вас отвисла!
+> Чистка диска, оптимизация, диагностика и планировщик - реестры, честный `WhatIf`, 3-цветная палитра солнца. Всё сделано для того, чтобы челюсть у вас отвисла!
 
 **Палитра:** `Amber #FFB627` · `White #FFF4E6` · `Coral #FF6B35` на тёмном фоне.
 
