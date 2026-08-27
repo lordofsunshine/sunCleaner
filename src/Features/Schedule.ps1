@@ -6,7 +6,7 @@
 
 $script:sunCleanerTaskPath = '\sunCleaner\'
 
-#   returns one spec per scheduled task. No registration, no I/O.
+#   returns one spec per scheduled task. No registration, I/O.
 function Get-sunCleanerScheduleSpec {
     param(
         [Parameter(Mandatory)][string]$Root,
@@ -49,9 +49,6 @@ function New-sunCleanerTrigger {
             return New-ScheduledTaskTrigger -Weekly -DaysOfWeek $Spec.Day -At $at
         }
         'Monthly' {
-            # new-ScheduledTaskTrigger has no -Monthly, so build the CIM trigger.
-            # mSFT_TaskMonthlyTrigger: DaysOfMonth and MonthOfYear (singular) are
-            # bitmasks; MonthOfYear MUST be set or the task never fires.
             $cls = Get-CimClass -ClassName MSFT_TaskMonthlyTrigger `
                 -Namespace 'Root/Microsoft/Windows/TaskScheduler'
             $t = New-CimInstance -CimClass $cls -ClientOnly
