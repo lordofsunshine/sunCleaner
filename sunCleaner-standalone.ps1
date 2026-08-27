@@ -1,7 +1,7 @@
 <#
 .SYNOPSIS
     sunCleaner - standalone pastebin - lordofsunshine/sunCleaner v1.0.0
-    Run without install: powershell -ExecutionPolicy Bypass -Command "irm https://pastebin.com/raw/XXXX | iex"
+    Run without install: powershell -ExecutionPolicy Bypass -Command "irm https://raw.githubusercontent.com/lordofsunshine/sunCleaner/refs/heads/main/sunCleaner-standalone.ps1 | iex"
 #>
 
 #Requires -Version 5.1
