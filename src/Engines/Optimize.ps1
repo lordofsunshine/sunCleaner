@@ -748,7 +748,7 @@ function Show-OptUsageHelp {
 sunCleaner - optimization engine v1.0.0  (registry-driven, full undo)
 
 USAGE
-  .\Optimize-Windows-Senior.ps1 [options]
+  .\	sunCleaner.ps1 [options]
 
 SELECTION
   -Area <names>         Limit to: Performance, Privacy, Debloat, Network
@@ -774,9 +774,9 @@ OUTPUT
   -Help                 Show this help
 
 EXAMPLES
-  .\Optimize-Windows-Senior.ps1 -WhatIf
-  .\Optimize-Windows-Senior.ps1 -Area Privacy,Performance
-  .\Optimize-Windows-Senior.ps1 -Undo
+  .\sunCleaner.ps1 -WhatIf
+  .\sunCleaner.ps1 -Area Privacy,Performance
+  .\sunCleaner.ps1 -Undo
 '@ | Write-Host
 }
 
