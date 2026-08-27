@@ -696,7 +696,7 @@ function Show-UsageHelp {
 sunCleaner - cleanup engine v1.0.0  (registry-driven engine)
 
 USAGE
-  .\Cleanup-Windows-Senior.ps1 [options]
+  .\sunCleaner.ps1 [options]
 
 SELECTION
   -Category <names>     Limit to: Browsers, DevTools, Apps, Games, System, Disks, Logs, Updates, Optimization
@@ -721,10 +721,10 @@ OUTPUT
   -Help                 Show this help
 
 EXAMPLES
-  .\Cleanup-Windows-Senior.ps1 -WhatIf
-  .\Cleanup-Windows-Senior.ps1 -Category Browsers,DevTools
-  .\Cleanup-Windows-Senior.ps1 -Unattended -NoRestorePoint -SkipOptimization
-  .\Cleanup-Windows-Senior.ps1 -IncludeDangerous -ReportPath C:\Logs\clean.json
+  .\sunCleaner.ps1 -WhatIf
+  .\sunCleaner.ps1 -Category Browsers,DevTools
+  .\sunCleaner.ps1 -Unattended -NoRestorePoint -SkipOptimization
+  .\sunCleaner.ps1 -IncludeDangerous -ReportPath C:\Logs\clean.json
 '@ | Write-Host
 }
 
