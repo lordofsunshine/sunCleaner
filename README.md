@@ -1,15 +1,15 @@
-<h1 align="center">sunCleaner ☀️</h1>
+<h1 align="center">☀️ sunCleaner</h1>
 
 <p align="center">
-  <b>lordofsunshine/sunCleaner</b> — solar care for Windows<br>
-  <sub>PowerShell · Windows 10/11 · 158 tweaks · honest WhatIf</sub>
+  <strong>Solar care for Windows</strong><br>
+  <sub>PowerShell · Windows 10/11 · 158 actions · honest WhatIf</sub>
 </p>
 
 <p align="center">
-  <img src="https://img.shields.io/badge/version-1.0.0-ffb627?style=for-the-badge" />
-  <img src="https://img.shields.io/badge/powershell-5.1-3178c6?style=for-the-badge&logo=powershell&logoColor=white" />
-  <img src="https://img.shields.io/badge/platform-Windows%2010%20%7C%2011-0078d6?style=for-the-badge" />
-  <img src="https://img.shields.io/badge/license-MIT-ffffff?style=for-the-badge" />
+  <img src="https://img.shields.io/badge/version-1.0.0-ffb627?style=for-the-badge" alt="Version 1.0.0">
+  <img src="https://img.shields.io/badge/PowerShell-5.1-3178c6?style=for-the-badge&logo=powershell&logoColor=white" alt="PowerShell 5.1">
+  <img src="https://img.shields.io/badge/Windows-10%20%7C%2011-0078d6?style=for-the-badge&logo=windows&logoColor=white" alt="Windows 10 and 11">
+  <img src="https://img.shields.io/badge/license-MIT-ffffff?style=for-the-badge" alt="MIT License">
 </p>
 
 <p align="center">
@@ -17,17 +17,27 @@
 </p>
 
 <p align="center">
-  <img alt="Banner" src="https://i.ibb.co/357rXLp9/image.png">
+  <img alt="sunCleaner banner" src="https://i.ibb.co/357rXLp9/image.png">
 </p>
 
 ---
 
 <a id="english"></a>
+
 ## English
 
-> Disk cleanup, optimization, diagnostics and scheduler — declarative registries, honest `WhatIf`, 3-color palette.
+> Disk cleanup, optimization, diagnostics and scheduling in one PowerShell tool. Declarative registries, honest `WhatIf`, 3-color palette.
 
-**Palette:** `Amber #FFB627` · `White #FFF4E6` · `Coral #FF6B35` on dark background.
+**Palette:** `Amber #FFB627` · `White #FFF4E6` · `Coral #FF6B35` on a dark background.
+
+### At a glance
+
+| | |
+|---|---|
+| **158 actions** | Clean **69** · Optimize **61** · Repair **28** |
+| **Preview first** | Honest `WhatIf` before changes are applied |
+| **Recovery** | Restore point support and `Undo` for optimization tweaks |
+| **Built-in tools** | Network, startup and scheduler utilities |
 
 ### Quick start
 
@@ -38,7 +48,7 @@
 .\sunCleaner.ps1 -InstallSchedule
 .\sunCleaner.ps1 -RemoveSchedule
 
-# without install — raw GitHub
+# without install: raw GitHub
 powershell -ExecutionPolicy Bypass -Command "irm https://raw.githubusercontent.com/lordofsunshine/sunCleaner/refs/heads/main/sunCleaner-standalone.ps1 | iex"
 ```
 
@@ -49,7 +59,7 @@ Menu: `↑`/`↓` navigate, `Enter` select, `Space` toggle, `a` all, `n` none, `
 | Section | What it does |
 |---------|--------------|
 | Disk cleanup | Browser, dev-tools, apps, games, system, logs and update caches |
-| Optimize Windows | Performance, privacy, debloat, network — full `Undo` |
+| Optimize Windows | Performance, privacy, debloat and network tweaks with full `Undo` |
 | Troubleshoot | 28 checks, offers to fix, heavy fixes on demand |
 | Tools | Network (dns/reset/adapters), Startup (autostart), Schedule |
 | Manage tweaks | Pick category → list with `[x]/[ ]` → on/off affects next run |
@@ -71,66 +81,66 @@ Menu: `↑`/`↓` navigate, `Enter` select, `Space` toggle, `a` all, `n` none, `
 | Updates 4 |  | Update 3 |
 | Optimization 6 |  |  |
 
-### What it cleans / tweaks / checks
+### What it cleans, tweaks and checks
 
 <details>
-<summary><b>Disk cleanup — 69 tasks</b></summary>
+<summary><b>Disk cleanup: 69 tasks</b></summary>
 
-**Browsers (6)** — Chrome, Edge, Firefox, Opera, Yandex, Brave `Cache / Code Cache / GPUCache / Service Worker`
+**Browsers (6)**: Chrome, Edge, Firefox, Opera, Yandex, Brave `Cache / Code Cache / GPUCache / Service Worker`
 
-**DevTools (12)** — `npm`, `pip`, `Yarn`, `NuGet`, `Gradle`, `VS Code`, `JetBrains (caches/logs/tmp)`, `Nuitka`, `Docker`, `pnpm`, `winget/choco/scoop/conda/cargo/go/pub`, `PowerShell AnalysisCache`
+**DevTools (12)**: `npm`, `pip`, `Yarn`, `NuGet`, `Gradle`, `VS Code`, `JetBrains (caches/logs/tmp)`, `Nuitka`, `Docker`, `pnpm`, `winget/choco/scoop/conda/cargo/go/pub`, `PowerShell AnalysisCache`
 
-**Apps (12)** — `Windows app cache`, `Teams` (classic+new), `Discord`, `Slack`, `Spotify`, `Office` (FileCache/Wef), `OneDrive logs`, `Adobe media/CameraRaw`, `RDP bitmap`, `Outlook RoamCache`, `Adobe Photoshop Logs`, `Store temp`
+**Apps (12)**: `Windows app cache`, `Teams` (classic+new), `Discord`, `Slack`, `Spotify`, `Office` (FileCache/Wef), `OneDrive logs`, `Adobe media/CameraRaw`, `RDP bitmap`, `Outlook RoamCache`, `Adobe Photoshop Logs`, `Store temp`
 
-**Games (1)** — `Steam`/`Epic`/`Battle.net`/`GOG` caches
+**Games (1)**: `Steam`/`Epic`/`Battle.net`/`GOG` caches
 
-**System (17)** — `User/Windows Temp`, `WinINet`, `thumbnails`, `GPU shader (NVIDIA/AMD)`, `Driver leftovers`, `WebCache`, `DeliveryOptimization`, `Recent/JumpLists`, `FontCache`, `Win Logs`, `Prefetch`, `driver pnputil`, `Print spooler queue`
+**System (17)**: `User/Windows Temp`, `WinINet`, `thumbnails`, `GPU shader (NVIDIA/AMD)`, `Driver leftovers`, `WebCache`, `DeliveryOptimization`, `Recent/JumpLists`, `FontCache`, `Win Logs`, `Prefetch`, `driver pnputil`, `Print spooler queue`
 
-**Disks (2)** — `Temp/tmp` on all drives, `FOUND.*`
+**Disks (2)**: `Temp/tmp` on all drives, `FOUND.*`
 
-**Logs (9)** — `WER`, `Panther/setupapi`, `LiveKernel`, `SRU`, `EventTranscript`, `CrashDumps`, `IIS (>14d)`, `Recycle Bin`, `Event logs` (dangerous)
+**Logs (9)**: `WER`, `Panther/setupapi`, `LiveKernel`, `SRU`, `EventTranscript`, `CrashDumps`, `IIS (>14d)`, `Recycle Bin`, `Event logs` (dangerous)
 
-**Updates (4)** — `WU Download`, `SoftwareDistribution`, `PatchCache` (dangerous), `Windows.old`
+**Updates (4)**: `WU Download`, `SoftwareDistribution`, `PatchCache` (dangerous), `Windows.old`
 
-**Optimization (6)** — `DISM /Analyze`, `StartComponentCleanup`, `DISM cleanup`, `DISM ResetBase`, `DISM logs`, `sfc /scannow`, `Volume ReTrim`, `Store WSReset`
+**Optimization (6)**: `DISM /Analyze`, `StartComponentCleanup`, `DISM cleanup`, `DISM ResetBase`, `DISM logs`, `sfc /scannow`, `Volume ReTrim`, `Store WSReset`
 
 </details>
 
 <details>
-<summary><b>Optimize — 61 tweaks</b></summary>
+<summary><b>Optimize: 61 tweaks</b></summary>
 
-**Performance (10)** — `visual effects best`, `menu delay 0`, `startup delay 0`, `background apps off`, `fast startup off`, `High Performance plan`, `Ultimate plan`, `SysMain off`, `WSearch off`, `hibernation off`
+**Performance (10)**: `visual effects best`, `menu delay 0`, `startup delay 0`, `background apps off`, `fast startup off`, `High Performance plan`, `Ultimate plan`, `SysMain off`, `WSearch off`, `hibernation off`
 
-**Privacy (26)** — `telemetry min`, `advertising ID off`, `consumer features off`, `tips/spotlight off`, `activity feed off`, `web search off`, `Cortana off`, `DiagTrack off`, `dmwappush off`, `CEIP tasks off`, `Recall/ClickToDo off`, `Copilot off`, `tailored experiences off`, `Spotlight off`, `inking personalization off`, `typing upload off`, `speech cloud off`, `CEIP off`, `appcompat telemetry off`, `WER upload off`, `feedback off`, `DeliveryOptimization P2P off`, `OneDrive pre-signin off`, `clipboard sync off`, `location off`, `FindMyDevice off`
+**Privacy (26)**: `telemetry min`, `advertising ID off`, `consumer features off`, `tips/spotlight off`, `activity feed off`, `web search off`, `Cortana off`, `DiagTrack off`, `dmwappush off`, `CEIP tasks off`, `Recall/ClickToDo off`, `Copilot off`, `tailored experiences off`, `Spotlight off`, `inking personalization off`, `typing upload off`, `speech cloud off`, `CEIP off`, `appcompat telemetry off`, `WER upload off`, `feedback off`, `DeliveryOptimization P2P off`, `OneDrive pre-signin off`, `clipboard sync off`, `location off`, `FindMyDevice off`
 
-**Debloat (8)** — `junk UWP remove`, `Xbox remove`, `comms remove (Mail/Skype/Phone)`, `Start ads off`, `taskbar Widgets/Chat/Start/Explorer ads off`, `SCOOBE nag off`, `file extensions show`, `classic context menu`
+**Debloat (8)**: `junk UWP remove`, `Xbox remove`, `comms remove (Mail/Skype/Phone)`, `Start ads off`, `taskbar Widgets/Chat/Start/Explorer ads off`, `SCOOBE nag off`, `file extensions show`, `classic context menu`
 
-**Network (7)** — `GameDVR off`, `GameDVR policy`, `Game Mode on`, `throttling off`, `Teredo off`, `NDU off`, `Nagle off`
+**Network (7)**: `GameDVR off`, `GameDVR policy`, `Game Mode on`, `throttling off`, `Teredo off`, `NDU off`, `Nagle off`
 
-**Appearance (10)** — `dark mode`, `transparency off`, `animations off`, `taskbar left`, `taskbar combine never`, `search hidden`, `Task View off`, `Start recommended off`, `hidden files on`, `NumLock on`, `mouse accel off`
+**Appearance (10)**: `dark mode`, `transparency off`, `animations off`, `taskbar left`, `taskbar combine never`, `search hidden`, `Task View off`, `Start recommended off`, `hidden files on`, `NumLock on`, `mouse accel off`
 
 </details>
 
 <details>
-<summary><b>Repair — 28 checks</b></summary>
+<summary><b>Repair: 28 checks</b></summary>
 
-**System (10)** — `WMI consistency`, `time sync`, `recent error events`, `System Restore`, `scheduled tasks`, `Store health`, `SSD wear/temp`, `crash history (BSOD)`, `startup bloat`, `volume fragmentation`
+**System (10)**: `WMI consistency`, `time sync`, `recent error events`, `System Restore`, `scheduled tasks`, `Store health`, `SSD wear/temp`, `crash history (BSOD)`, `startup bloat`, `volume fragmentation`
 
-**Disk (4)** — `SMART`, `low space`, `dirty flag (chkdsk)`, `reliability`
+**Disk (4)**: `SMART`, `low space`, `dirty flag (chkdsk)`, `reliability`
 
-**Security (4)** — `Defender health`, `firewall`, `Defender signatures`, `SMBv1`
+**Security (4)**: `Defender health`, `firewall`, `Defender signatures`, `SMBv1`
 
-**Network (3)** — `Internet/DNS`, `hosts hijack`, `proxy/PAC hijack`
+**Network (3)**: `Internet/DNS`, `hosts hijack`, `proxy/PAC hijack`
 
-**Update (3)** — `pending reboot`, `WU components`, `BITS queue`
+**Update (3)**: `pending reboot`, `WU components`, `BITS queue`
 
-**Other** — `Integrity (DISM)`, `Devices (driver errors)`, `Services (critical stopped)`, `winget updates`
+**Other**: `Integrity (DISM)`, `Devices (driver errors)`, `Services (critical stopped)`, `winget updates`
 
 `Safe`/`Moderate` fix immediately, `Aggressive`/`Heavy` only with `IncludeHeavy`.
 
 </details>
 
-### Structure
+### Project structure
 
 ```
 sunCleaner.ps1                entry, honest loader
@@ -143,19 +153,29 @@ src/Menu     Main             banner, splash, menu, Manage
 
 ### Safety
 
-* `Test-SafeToDelete` blocks `C:\`, `C:\Windows`, `System32`, `C:\Users`, shallow paths
-* `Checkpoint-Computer` restore point (clears 24h throttle)
-* Every tweak backs up value → `Undo`
-* Start with `Preview` (`WhatIf`) — honest count, not estimate
+- `Test-SafeToDelete` blocks `C:\`, `C:\Windows`, `System32`, `C:\Users`, shallow paths
+- `Checkpoint-Computer` restore point (clears 24h throttle)
+- Every tweak backs up value → `Undo`
+- Start with `Preview` (`WhatIf`): honest count, not estimate
 
 ---
 
 <a id="russian"></a>
+
 ## Русский
 
-> Чистка диска, оптимизация, диагностика и планировщик — реестры, честный `WhatIf`, 3-цветная палитра.
+> Чистка диска, оптимизация, диагностика и планировщик в одном PowerShell-инструменте. Реестры, честный `WhatIf`, 3-цветная палитра.
 
 **Палитра:** `Amber #FFB627` · `White #FFF4E6` · `Coral #FF6B35` на тёмном фоне.
+
+### Коротко
+
+| | |
+|---|---|
+| **158 действий** | Clean **69** · Optimize **61** · Repair **28** |
+| **Сначала Preview** | Честный `WhatIf` до применения изменений |
+| **Восстановление** | Точки восстановления и `Undo` для твиков |
+| **Встроенные инструменты** | Сеть, автозагрузка и планировщик |
 
 ### Быстрый старт
 
@@ -166,7 +186,7 @@ src/Menu     Main             banner, splash, menu, Manage
 .\sunCleaner.ps1 -InstallSchedule
 .\sunCleaner.ps1 -RemoveSchedule
 
-# без установки — raw GitHub
+# без установки: raw GitHub
 powershell -ExecutionPolicy Bypass -Command "irm https://raw.githubusercontent.com/lordofsunshine/sunCleaner/refs/heads/main/sunCleaner-standalone.ps1 | iex"
 ```
 
@@ -177,7 +197,7 @@ powershell -ExecutionPolicy Bypass -Command "irm https://raw.githubusercontent.c
 | Раздел | Что делает |
 |--------|------------|
 | Disk cleanup | Кэши браузеров, дев-тулов, приложений, игр, системы, логов, обновлений |
-| Optimize Windows | Твики производительности, приватности, де-блока, сети — с полным `Undo` |
+| Optimize Windows | Твики производительности, приватности, debloat и сети с полным `Undo` |
 | Troubleshoot | 28 проверок и предлагает починить, heavy-фиксы по выбору |
 | Tools | `Network` (dns/reset/adapters), `Startup` (автозагрузка), `Schedule` |
 | Manage tweaks | Выбор категории → список `[x]/[ ]` → вкл/выкл влияет на следующий запуск |
@@ -199,66 +219,66 @@ powershell -ExecutionPolicy Bypass -Command "irm https://raw.githubusercontent.c
 | Updates 4 |  | Update 3 |
 | Optimization 6 |  |  |
 
-### Что чистит / твикает / проверяет
+### Что чистит, твикает и проверяет
 
 <details>
-<summary><b>Disk cleanup — 69 задач</b></summary>
+<summary><b>Disk cleanup: 69 задач</b></summary>
 
-**Browsers (6)** — Chrome, Edge, Firefox, Opera, Yandex, Brave `Cache / Code Cache / GPUCache / Service Worker`
+**Browsers (6)**: Chrome, Edge, Firefox, Opera, Yandex, Brave `Cache / Code Cache / GPUCache / Service Worker`
 
-**DevTools (12)** — `npm`, `pip`, `Yarn`, `NuGet`, `Gradle`, `VS Code`, `JetBrains (caches/logs/tmp)`, `Nuitka`, `Docker`, `pnpm`, `winget/choco/scoop/conda/cargo/go/pub`, `PowerShell AnalysisCache`
+**DevTools (12)**: `npm`, `pip`, `Yarn`, `NuGet`, `Gradle`, `VS Code`, `JetBrains (caches/logs/tmp)`, `Nuitka`, `Docker`, `pnpm`, `winget/choco/scoop/conda/cargo/go/pub`, `PowerShell AnalysisCache`
 
-**Apps (12)** — `Windows app cache`, `Teams` (classic+new), `Discord`, `Slack`, `Spotify`, `Office` (FileCache/Wef), `OneDrive logs`, `Adobe media/CameraRaw`, `RDP bitmap`, `Outlook RoamCache`, `Adobe Photoshop Logs`, `Store temp`
+**Apps (12)**: `Windows app cache`, `Teams` (classic+new), `Discord`, `Slack`, `Spotify`, `Office` (FileCache/Wef), `OneDrive logs`, `Adobe media/CameraRaw`, `RDP bitmap`, `Outlook RoamCache`, `Adobe Photoshop Logs`, `Store temp`
 
-**Games (1)** — `Steam`/`Epic`/`Battle.net`/`GOG` кэши
+**Games (1)**: `Steam`/`Epic`/`Battle.net`/`GOG` кэши
 
-**System (17)** — `User/Windows Temp`, `WinINet`, `thumbnails`, `GPU shader (NVIDIA/AMD)`, `Driver leftovers`, `WebCache`, `DeliveryOptimization`, `Recent/JumpLists`, `FontCache`, `Win Logs`, `Prefetch`, `driver pnputil`, `Print spooler queue`
+**System (17)**: `User/Windows Temp`, `WinINet`, `thumbnails`, `GPU shader (NVIDIA/AMD)`, `Driver leftovers`, `WebCache`, `DeliveryOptimization`, `Recent/JumpLists`, `FontCache`, `Win Logs`, `Prefetch`, `driver pnputil`, `Print spooler queue`
 
-**Disks (2)** — `Temp/tmp` на всех дисках, `FOUND.*`
+**Disks (2)**: `Temp/tmp` на всех дисках, `FOUND.*`
 
-**Logs (9)** — `WER`, `Panther/setupapi`, `LiveKernel`, `SRU`, `EventTranscript`, `CrashDumps`, `IIS (>14д)`, `Recycle Bin`, `Event logs` (dangerous)
+**Logs (9)**: `WER`, `Panther/setupapi`, `LiveKernel`, `SRU`, `EventTranscript`, `CrashDumps`, `IIS (>14д)`, `Recycle Bin`, `Event logs` (dangerous)
 
-**Updates (4)** — `WU Download`, `SoftwareDistribution`, `PatchCache` (dangerous), `Windows.old`
+**Updates (4)**: `WU Download`, `SoftwareDistribution`, `PatchCache` (dangerous), `Windows.old`
 
-**Optimization (6)** — `DISM /Analyze`, `StartComponentCleanup`, `DISM cleanup`, `DISM ResetBase`, `DISM logs`, `sfc /scannow`, `Volume ReTrim`, `Store WSReset`
+**Optimization (6)**: `DISM /Analyze`, `StartComponentCleanup`, `DISM cleanup`, `DISM ResetBase`, `DISM logs`, `sfc /scannow`, `Volume ReTrim`, `Store WSReset`
 
 </details>
 
 <details>
-<summary><b>Optimize — 61 твик</b></summary>
+<summary><b>Optimize: 61 твик</b></summary>
 
-**Performance (10)** — `visual effects best`, `menu delay 0`, `startup delay 0`, `background apps off`, `fast startup off`, `High Performance plan`, `Ultimate plan`, `SysMain off`, `WSearch off`, `hibernation off`
+**Performance (10)**: `visual effects best`, `menu delay 0`, `startup delay 0`, `background apps off`, `fast startup off`, `High Performance plan`, `Ultimate plan`, `SysMain off`, `WSearch off`, `hibernation off`
 
-**Privacy (26)** — `telemetry min`, `advertising ID off`, `consumer features off`, `tips/spotlight off`, `activity feed off`, `web search off`, `Cortana off`, `DiagTrack off`, `dmwappush off`, `CEIP tasks off`, `Recall/ClickToDo off`, `Copilot off`, `tailored experiences off`, `Spotlight off`, `inking personalization off`, `typing upload off`, `speech cloud off`, `CEIP off`, `appcompat telemetry off`, `WER upload off`, `feedback off`, `DeliveryOptimization P2P off`, `OneDrive pre-signin off`, `clipboard sync off`, `location off`, `FindMyDevice off`
+**Privacy (26)**: `telemetry min`, `advertising ID off`, `consumer features off`, `tips/spotlight off`, `activity feed off`, `web search off`, `Cortana off`, `DiagTrack off`, `dmwappush off`, `CEIP tasks off`, `Recall/ClickToDo off`, `Copilot off`, `tailored experiences off`, `Spotlight off`, `inking personalization off`, `typing upload off`, `speech cloud off`, `CEIP off`, `appcompat telemetry off`, `WER upload off`, `feedback off`, `DeliveryOptimization P2P off`, `OneDrive pre-signin off`, `clipboard sync off`, `location off`, `FindMyDevice off`
 
-**Debloat (8)** — `junk UWP remove`, `Xbox remove`, `comms remove (Mail/Skype/Phone)`, `Start ads off`, `taskbar Widgets/Chat/Start/Explorer ads off`, `SCOOBE nag off`, `file extensions show`, `classic context menu`
+**Debloat (8)**: `junk UWP remove`, `Xbox remove`, `comms remove (Mail/Skype/Phone)`, `Start ads off`, `taskbar Widgets/Chat/Start/Explorer ads off`, `SCOOBE nag off`, `file extensions show`, `classic context menu`
 
-**Network (7)** — `GameDVR off`, `GameDVR policy`, `Game Mode on`, `throttling off`, `Teredo off`, `NDU off`, `Nagle off`
+**Network (7)**: `GameDVR off`, `GameDVR policy`, `Game Mode on`, `throttling off`, `Teredo off`, `NDU off`, `Nagle off`
 
-**Appearance (10)** — `dark mode`, `transparency off`, `animations off`, `taskbar left`, `taskbar combine never`, `search hidden`, `Task View off`, `Start recommended off`, `hidden files on`, `NumLock on`, `mouse accel off`
+**Appearance (10)**: `dark mode`, `transparency off`, `animations off`, `taskbar left`, `taskbar combine never`, `search hidden`, `Task View off`, `Start recommended off`, `hidden files on`, `NumLock on`, `mouse accel off`
 
 </details>
 
 <details>
-<summary><b>Repair — 28 проверок</b></summary>
+<summary><b>Repair: 28 проверок</b></summary>
 
-**System (10)** — `WMI consistency`, `time sync`, `recent error events`, `System Restore`, `scheduled tasks`, `Store health`, `SSD wear/temp`, `crash history (BSOD)`, `startup bloat`, `volume fragmentation`
+**System (10)**: `WMI consistency`, `time sync`, `recent error events`, `System Restore`, `scheduled tasks`, `Store health`, `SSD wear/temp`, `crash history (BSOD)`, `startup bloat`, `volume fragmentation`
 
-**Disk (4)** — `SMART`, `low space`, `dirty flag (chkdsk)`, `reliability`
+**Disk (4)**: `SMART`, `low space`, `dirty flag (chkdsk)`, `reliability`
 
-**Security (4)** — `Defender health`, `firewall`, `Defender signatures`, `SMBv1`
+**Security (4)**: `Defender health`, `firewall`, `Defender signatures`, `SMBv1`
 
-**Network (3)** — `Internet/DNS`, `hosts hijack`, `proxy/PAC hijack`
+**Network (3)**: `Internet/DNS`, `hosts hijack`, `proxy/PAC hijack`
 
-**Update (3)** — `pending reboot`, `WU components`, `BITS queue`
+**Update (3)**: `pending reboot`, `WU components`, `BITS queue`
 
-**Other** — `Integrity (DISM)`, `Devices (driver errors)`, `Services (critical stopped)`, `winget updates`
+**Other**: `Integrity (DISM)`, `Devices (driver errors)`, `Services (critical stopped)`, `winget updates`
 
-`Safe`/`Moderate` чинятся сразу, `Aggressive`/`Heavy` — только с `IncludeHeavy`.
+`Safe` / `Moderate` чинятся сразу. `Aggressive` / `Heavy` только с `IncludeHeavy`.
 
 </details>
 
-### Структура
+### Структура проекта
 
 ```
 sunCleaner.ps1                entry, honest loader
@@ -271,11 +291,14 @@ src/Menu     Main             баннер, сплэш, меню, Manage
 
 ### Безопасность
 
-* `Test-SafeToDelete` блокирует `C:\`, `C:\Windows`, `System32`, `C:\Users`, мелкий путь
-* `Checkpoint-Computer` точка восстановления (снимает 24ч троттл)
-* Каждый твик бэкапит значение → `Undo`
-* Начни с `Preview` (`WhatIf`) — честный подсчёт, не оценка
+- `Test-SafeToDelete` блокирует `C:\`, `C:\Windows`, `System32`, `C:\Users`, мелкий путь
+- `Checkpoint-Computer` точка восстановления (снимает 24ч троттл)
+- Каждый твик бэкапит значение → `Undo`
+- Начни с `Preview` (`WhatIf`): честный подсчёт, не оценка
 
 ---
 
-<p align="center">MIT © 2026 <b>lordofsunshine/sunCleaner</b> — keep it sunny ☀️</p>
+<p align="center">
+  <strong>MIT © 2026 lordofsunshine/sunCleaner</strong><br>
+  <sub>keep it sunny ☀️</sub>
+</p>
