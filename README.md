@@ -1,4 +1,4 @@
-<h1 align="center">sunCleaner</h1>
+<h1 align="center">sunCleaner ☀️</h1>
 
 <p align="center">
   <b>lordofsunshine/sunCleaner</b> — solar care for Windows<br>
