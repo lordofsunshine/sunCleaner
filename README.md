@@ -1,9 +1,8 @@
-<h1 align="center">
-☀️ sunCleaner
-</h1>
+<h1 align="center">sunCleaner</h1>
 
 <p align="center">
-  <b>lordofsunshine/sunCleaner</b> — solar care for Windows
+  <b>lordofsunshine/sunCleaner</b> — solar care for Windows<br>
+  <sub>PowerShell · Windows 10/11 · 158 tweaks · honest WhatIf</sub>
 </p>
 
 <p align="center">
@@ -14,51 +13,54 @@
 </p>
 
 <p align="center">
-  <a href="#-english">🇬🇧 English</a> &nbsp;·&nbsp; <a href="#-русский">🇷🇺 Русский</a>
+  <a href="#english">English</a> · <a href="#russian">Русский</a>
+</p>
+
+<p align="center">
+  <img alt="Banner" src="https://i.ibb.co/357rXLp9/image.png">
 </p>
 
 ---
 
-<a id="-english"></a>
-## 🇬🇧 English
+<a id="english"></a>
+## English
 
-> Disk cleanup, optimization, diagnostics and scheduler - declarative registries, honest `WhatIf`, 3-color sun palette. Made to drop your jaw!
+> Disk cleanup, optimization, diagnostics and scheduler — declarative registries, honest `WhatIf`, 3-color palette.
 
 **Palette:** `Amber #FFB627` · `White #FFF4E6` · `Coral #FF6B35` on dark background.
 
-### 🚀 Quick start
+### Quick start
 
 ```powershell
+# local
 .\sunCleaner.ps1                 # interactive menu, auto-elevates
 .\sunCleaner.ps1 -Plain          # ascii borders
 .\sunCleaner.ps1 -InstallSchedule
 .\sunCleaner.ps1 -RemoveSchedule
+
+# without install — raw GitHub
+powershell -ExecutionPolicy Bypass -Command "irm https://raw.githubusercontent.com/lordofsunshine/sunCleaner/refs/heads/main/sunCleaner-standalone.ps1 | iex"
 ```
 
 Menu: `↑`/`↓` navigate, `Enter` select, `Space` toggle, `a` all, `n` none, `Esc` back.
 
-**Without install (pastebin):**
-```powershell
-powershell -ExecutionPolicy Bypass -Command "irm https://pastebin.com/raw/XXXX | iex"
-```
-
-### ✨ Capabilities
+### Capabilities
 
 | Section | What it does |
 |---------|--------------|
-| **Disk cleanup** | Clears browser, dev-tools, apps, games, system, logs and update caches |
-| **Optimize Windows** | Performance, privacy, debloat, network tweaks — full `Undo` |
-| **Troubleshoot** | Scans 28 checks and offers to fix, heavy fixes on demand |
-| **Tools** | `Network` (dns/reset/adapters), `Startup` (autostart), `Schedule` (scheduler) |
-| **Manage tweaks** | Pick category → list with `[x]/[ ]` → on/off affects next run |
-| **Safety** | `Undo` last optimization, create restore point |
+| Disk cleanup | Browser, dev-tools, apps, games, system, logs and update caches |
+| Optimize Windows | Performance, privacy, debloat, network — full `Undo` |
+| Troubleshoot | 28 checks, offers to fix, heavy fixes on demand |
+| Tools | Network (dns/reset/adapters), Startup (autostart), Schedule |
+| Manage tweaks | Pick category → list with `[x]/[ ]` → on/off affects next run |
+| Safety | Undo last optimization, create restore point |
 
-### 📊 Stats
+### Stats
 
-**158 tweaks total** *(Clean 69 · Optimize 61 · Repair 28)*
+**158 total** · Clean **69** · Optimize **61** · Repair **28**
 
-| Clean (69) | Optimize (61) | Repair (28) |
-|------------|---------------|-------------|
+| Clean | Optimize | Repair |
+|-------|----------|--------|
 | Browsers 6 | Appearance 10 | Devices 1 |
 | DevTools 12 | Debloat 8 | Disk 4 |
 | Apps 12 | Network 7 | Integrity 1 |
@@ -69,10 +71,10 @@ powershell -ExecutionPolicy Bypass -Command "irm https://pastebin.com/raw/XXXX |
 | Updates 4 |  | Update 3 |
 | Optimization 6 |  |  |
 
-### 📦 What it cleans / tweaks / checks
+### What it cleans / tweaks / checks
 
 <details>
-<summary><b>🧹 Disk cleanup — 69 tasks</b></summary>
+<summary><b>Disk cleanup — 69 tasks</b></summary>
 
 **Browsers (6)** — Chrome, Edge, Firefox, Opera, Yandex, Brave `Cache / Code Cache / GPUCache / Service Worker`
 
@@ -95,7 +97,7 @@ powershell -ExecutionPolicy Bypass -Command "irm https://pastebin.com/raw/XXXX |
 </details>
 
 <details>
-<summary><b>⚡ Optimize — 61 tweaks</b></summary>
+<summary><b>Optimize — 61 tweaks</b></summary>
 
 **Performance (10)** — `visual effects best`, `menu delay 0`, `startup delay 0`, `background apps off`, `fast startup off`, `High Performance plan`, `Ultimate plan`, `SysMain off`, `WSearch off`, `hibernation off`
 
@@ -110,7 +112,7 @@ powershell -ExecutionPolicy Bypass -Command "irm https://pastebin.com/raw/XXXX |
 </details>
 
 <details>
-<summary><b>🔧 Repair — 28 checks</b></summary>
+<summary><b>Repair — 28 checks</b></summary>
 
 **System (10)** — `WMI consistency`, `time sync`, `recent error events`, `System Restore`, `scheduled tasks`, `Store health`, `SSD wear/temp`, `crash history (BSOD)`, `startup bloat`, `volume fragmentation`
 
@@ -128,28 +130,18 @@ powershell -ExecutionPolicy Bypass -Command "irm https://pastebin.com/raw/XXXX |
 
 </details>
 
-### 🗂️ Structure
+### Structure
 
 ```
-sunCleaner.ps1          — entry, honest loader
-sunCleaner-standalone.ps1 — single file for pastebin raw (irm | iex) with module progress
-src/
-  Core/
-    Common.ps1          — palette, logging, restore, reports
-    UI.ps1              — TUI, viewport, sun
-  Engines/
-    Clean.ps1           — 69 tasks
-    Optimize.ps1        — 61 tweaks
-    Repair.ps1          — 28 checks
-  Features/
-    Schedule.ps1        — \sunCleaner\ weekly/monthly
-    Network.ps1         — dns/reset/adapters/static/dhcp
-    Startup.ps1         — StartupApproved manager
-  Menu/
-    Main.ps1            — banner, splash, menu, Manage
+sunCleaner.ps1                entry, honest loader
+sunCleaner-standalone.ps1     single file for raw GitHub (irm | iex)
+src/Core     Common, UI       palette, logging, restore, TUI, sun
+src/Engines  Clean, Optimize, Repair   69 / 61 / 28
+src/Features Schedule, Network, Startup
+src/Menu     Main             banner, splash, menu, Manage
 ```
 
-### 🛡️ Safety
+### Safety
 
 * `Test-SafeToDelete` blocks `C:\`, `C:\Windows`, `System32`, `C:\Users`, shallow paths
 * `Checkpoint-Computer` restore point (clears 24h throttle)
@@ -158,46 +150,45 @@ src/
 
 ---
 
-<a id="-русский"></a>
-## 🇷🇺 Русский
+<a id="russian"></a>
+## Русский
 
-> Чистка диска, оптимизация, диагностика и планировщик - реестры, честный `WhatIf`, 3-цветная палитра солнца. Всё сделано для того, чтобы челюсть у вас отвисла!
+> Чистка диска, оптимизация, диагностика и планировщик — реестры, честный `WhatIf`, 3-цветная палитра.
 
 **Палитра:** `Amber #FFB627` · `White #FFF4E6` · `Coral #FF6B35` на тёмном фоне.
 
-### 🚀 Быстрый старт
+### Быстрый старт
 
 ```powershell
+# локально
 .\sunCleaner.ps1                 # интерактивное меню, сам повышает права
 .\sunCleaner.ps1 -Plain          # ascii рамки
 .\sunCleaner.ps1 -InstallSchedule
 .\sunCleaner.ps1 -RemoveSchedule
+
+# без установки — raw GitHub
+powershell -ExecutionPolicy Bypass -Command "irm https://raw.githubusercontent.com/lordofsunshine/sunCleaner/refs/heads/main/sunCleaner-standalone.ps1 | iex"
 ```
 
 Меню: `↑`/`↓` перемещение, `Enter` выбор, `Space` вкл/выкл, `a` все, `n` ни одного, `Esc` назад.
 
-**Без установки (pastebin):**
-```powershell
-powershell -ExecutionPolicy Bypass -Command "irm https://pastebin.com/raw/XXXX | iex"
-```
-
-### ✨ Возможности
+### Возможности
 
 | Раздел | Что делает |
 |--------|------------|
-| **Disk cleanup** | Чистит кэши браузеров, дев-тулов, приложений, игр, системы, логов, обновлений |
-| **Optimize Windows** | Твики производительности, приватности, де-блока, сети — с полным `Undo` |
-| **Troubleshoot** | Сканирует 28 проверок и предлагает починить, heavy-фиксы по выбору |
-| **Tools** | `Network` (dns/reset/adapters), `Startup` (автозагрузка), `Schedule` (планировщик) |
-| **Manage tweaks** | Выбор категории → список с `[x]/[ ]` → вкл/выкл влияет на следующий запуск |
-| **Safety** | `Undo` последней оптимизации, создание точки восстановления |
+| Disk cleanup | Кэши браузеров, дев-тулов, приложений, игр, системы, логов, обновлений |
+| Optimize Windows | Твики производительности, приватности, де-блока, сети — с полным `Undo` |
+| Troubleshoot | 28 проверок и предлагает починить, heavy-фиксы по выбору |
+| Tools | `Network` (dns/reset/adapters), `Startup` (автозагрузка), `Schedule` |
+| Manage tweaks | Выбор категории → список `[x]/[ ]` → вкл/выкл влияет на следующий запуск |
+| Safety | `Undo` последней оптимизации, создание точки восстановления |
 
-### 📊 Статистика
+### Статистика
 
-**Всего 158 твиков** *(Clean 69 · Optimize 61 · Repair 28)*
+**Всего 158** · Clean **69** · Optimize **61** · Repair **28**
 
-| Clean (69) | Optimize (61) | Repair (28) |
-|------------|---------------|-------------|
+| Clean | Optimize | Repair |
+|-------|----------|--------|
 | Browsers 6 | Appearance 10 | Devices 1 |
 | DevTools 12 | Debloat 8 | Disk 4 |
 | Apps 12 | Network 7 | Integrity 1 |
@@ -208,10 +199,10 @@ powershell -ExecutionPolicy Bypass -Command "irm https://pastebin.com/raw/XXXX |
 | Updates 4 |  | Update 3 |
 | Optimization 6 |  |  |
 
-### 📦 Что чистит / твикает / проверяет
+### Что чистит / твикает / проверяет
 
 <details>
-<summary><b>🧹 Disk cleanup — 69 задач</b></summary>
+<summary><b>Disk cleanup — 69 задач</b></summary>
 
 **Browsers (6)** — Chrome, Edge, Firefox, Opera, Yandex, Brave `Cache / Code Cache / GPUCache / Service Worker`
 
@@ -234,7 +225,7 @@ powershell -ExecutionPolicy Bypass -Command "irm https://pastebin.com/raw/XXXX |
 </details>
 
 <details>
-<summary><b>⚡ Optimize — 61 твик</b></summary>
+<summary><b>Optimize — 61 твик</b></summary>
 
 **Performance (10)** — `visual effects best`, `menu delay 0`, `startup delay 0`, `background apps off`, `fast startup off`, `High Performance plan`, `Ultimate plan`, `SysMain off`, `WSearch off`, `hibernation off`
 
@@ -249,7 +240,7 @@ powershell -ExecutionPolicy Bypass -Command "irm https://pastebin.com/raw/XXXX |
 </details>
 
 <details>
-<summary><b>🔧 Repair — 28 проверок</b></summary>
+<summary><b>Repair — 28 проверок</b></summary>
 
 **System (10)** — `WMI consistency`, `time sync`, `recent error events`, `System Restore`, `scheduled tasks`, `Store health`, `SSD wear/temp`, `crash history (BSOD)`, `startup bloat`, `volume fragmentation`
 
@@ -267,28 +258,18 @@ powershell -ExecutionPolicy Bypass -Command "irm https://pastebin.com/raw/XXXX |
 
 </details>
 
-### 🗂️ Структура
+### Структура
 
 ```
-sunCleaner.ps1          — entry, honest loader
-sunCleaner-standalone.ps1 — single file for pastebin raw (irm | iex) с прогрессом по модулям
-src/
-  Core/
-    Common.ps1          — палитра, логи, restore, отчёты
-    UI.ps1              — TUI, viewport, солнце
-  Engines/
-    Clean.ps1           — 69 задач
-    Optimize.ps1        — 61 твик
-    Repair.ps1          — 28 проверок
-  Features/
-    Schedule.ps1        — \sunCleaner\ weekly/monthly
-    Network.ps1         — dns/reset/adapters/static/dhcp
-    Startup.ps1         — StartupApproved менеджер
-  Menu/
-    Main.ps1            — баннер, сплэш, меню, Manage
+sunCleaner.ps1                entry, honest loader
+sunCleaner-standalone.ps1     single file for raw GitHub (irm | iex)
+src/Core     Common, UI       палитра, логи, restore, TUI, солнце
+src/Engines  Clean, Optimize, Repair   69 / 61 / 28
+src/Features Schedule, Network, Startup
+src/Menu     Main             баннер, сплэш, меню, Manage
 ```
 
-### 🛡️ Немного про безопасность
+### Безопасность
 
 * `Test-SafeToDelete` блокирует `C:\`, `C:\Windows`, `System32`, `C:\Users`, мелкий путь
 * `Checkpoint-Computer` точка восстановления (снимает 24ч троттл)
